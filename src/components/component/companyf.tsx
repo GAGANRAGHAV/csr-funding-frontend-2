@@ -155,7 +155,7 @@ export function companyf() {
   )
 }
 
-function FilterIcon(props) {
+function FilterIcon(props:any) {
   return (
     <svg
       {...props}
@@ -175,7 +175,7 @@ function FilterIcon(props) {
 }
 
 
-function GiftIcon(props) {
+function GiftIcon(props:any) {
   return (
     <svg
       {...props}
@@ -198,7 +198,7 @@ function GiftIcon(props) {
 }
 
 
-function ListOrderedIcon(props) {
+function ListOrderedIcon(props:any) {
   return (
     <svg
       {...props}

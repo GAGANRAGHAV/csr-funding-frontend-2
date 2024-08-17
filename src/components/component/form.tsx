@@ -54,7 +54,7 @@ export function form() {
             </div>
             <div>
               <Label htmlFor="status">Project Status</Label>
-              <Select id="status">
+              <Select>
                 <SelectTrigger>
                   <SelectValue placeholder="Select status" />
                 </SelectTrigger>

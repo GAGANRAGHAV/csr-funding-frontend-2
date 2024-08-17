@@ -135,7 +135,7 @@ export function indi() {
   )
 }
 
-function BuildingIcon(props) {
+function BuildingIcon(props:any) {
   return (
     <svg
       {...props}
@@ -165,7 +165,7 @@ function BuildingIcon(props) {
 }
 
 
-function CurrencyIcon(props) {
+function CurrencyIcon(props:any) {
   return (
     <svg
       {...props}
