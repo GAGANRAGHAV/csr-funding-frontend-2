@@ -52,7 +52,7 @@ export default function login() {
         name,email,password,
       });
 
-      router.push('/company');
+      router.push('/companyf');
 
     }
     catch(err)
@@ -69,7 +69,7 @@ export default function login() {
         name, password,
       });
   
-      router.push('/company');
+      router.push('/companyf');
   
     } catch (err) {
       console.log('error logging in:', err);
