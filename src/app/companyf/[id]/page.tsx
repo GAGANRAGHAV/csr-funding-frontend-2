@@ -26,11 +26,19 @@ import axios from "axios";
 import { useParams } from "next/navigation"; // Use this hook for accessing params
 import { useState, useEffect } from "react";
 
+interface Project {
+    name: string;
+    description: string;
+    image: string;
+    moneyAllocated: string;
+    // Add other fields you expect in the project object
+  }
+
 
 export default function indi() {
 
     const { id } = useParams(); // Use useParams to get the 'id' from the URL
-  const [project, setProject] = useState(null);
+    const [project, setProject] = useState<Project | null>(null);
 
 
   useEffect(() => {

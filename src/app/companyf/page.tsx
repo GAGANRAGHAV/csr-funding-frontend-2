@@ -26,8 +26,15 @@ import { Progress } from "@/components/ui/progress"
 import { useEffect,useState } from "react";
 import axios from "axios";
 
+interface CompanyData {
+    _id: string;
+    name: string;
+    description: string;
+    moneyrequired: number;
+  }
+
 export default function companyf() {
-    const [projects, setProjects] = useState([]);
+    const [projects, setProjects] = useState<CompanyData[]>([]);
     // const [eventId, seteventId] = useState(null);
 
 

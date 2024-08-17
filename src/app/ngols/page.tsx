@@ -97,9 +97,9 @@ export default function login() {
           <CardHeader className="space-y-1">
             <div className="flex justify-between items-center">
               <CardTitle className="text-2xl">{isLoginForm ? "Login" : "Sign Up"}</CardTitle>
-              <Button variant={isLoginForm ? "secondary" : "primary"} onClick={() => setIsLoginForm(!isLoginForm)}>
-                {isLoginForm ? "Sign Up" : "Login"}
-              </Button>
+              <Button variant={isLoginForm ? "secondary" : "default"} onClick={() => setIsLoginForm(!isLoginForm)}>
+  {isLoginForm ? "Sign Up" : "Login"}
+</Button>
             </div>
             <CardDescription>
               {isLoginForm
