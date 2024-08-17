@@ -38,18 +38,17 @@ export default function ngof() {
         className="bg-primary text-primary-foreground py-4 px-6 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <MountainIcon className="h-8 w-8" />
-          <span className="text-xl font-bold">Acme NGO</span>
+          <span className="text-xl font-bold">NGO</span>
         </div>
         <nav className="hidden md:flex items-center gap-6">
-          <Link href="#" className="text-sm font-medium hover:underline" prefetch={false}>
-            Projects
+          <Link href="/form" className="text-sm font-medium hover:underline" prefetch={false}>
+            + Post Project
           </Link>
-          <Link href="#" className="text-sm font-medium hover:underline" prefetch={false}>
+          {/* <Link href="#" className="text-sm font-medium hover:underline" prefetch={false}>
             CSR
-          </Link>
-          <Link href="#" className="text-sm font-medium hover:underline" prefetch={false}>
-            Contact
-          </Link>
+          </Link> */}
+          <Link href="/" className="text-sm font-medium hover:underline" prefetch={false}>
+Logout          </Link>
         </nav>
         <Button variant="outline" className="md:hidden">
           <MenuIcon className="h-6 w-6" />
@@ -64,15 +63,15 @@ export default function ngof() {
                 Empowering Communities, Transforming Lives
               </h1>
               <p className="text-lg md:text-xl">
-                At Acme NGO, we are dedicated to making a lasting impact on the communities we serve. Join us in our
+                At NGO, we are dedicated to making a lasting impact on the communities we serve. Join us in our
                 mission to create a better world.
               </p>
-              <Link
+              {/* <Link
                 href="#"
                 className="inline-flex h-10 items-center justify-center rounded-md bg-secondary px-8 text-sm font-medium text-secondary-foreground shadow transition-colors hover:bg-secondary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                 prefetch={false}>
                 Explore Projects
-              </Link>
+              </Link> */}
             </div>
             <img
               src="/placeholder.svg"
@@ -82,7 +81,7 @@ export default function ngof() {
               className="mx-auto aspect-video rounded-lg object-cover" />
           </div>
         </section>
-        <section id="projects" className="py-12 md:py-24 lg:py-32">
+        {/* <section id="projects" className="py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6 space-y-8">
             <div className="text-center space-y-4">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Our Projects</h2>
@@ -159,8 +158,8 @@ export default function ngof() {
               </form>
             </div>
           </div>
-        </section>
-        <section className="bg-muted py-12 md:py-24 lg:py-32">
+        </section> */}
+        {/* <section className="bg-muted py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6 grid gap-6 md:grid-cols-2 items-center">
             <div>
               <img
@@ -186,7 +185,7 @@ export default function ngof() {
               </Link>
             </div>
           </div>
-        </section>
+        </section> */}
         <section id="csr" className="py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6 space-y-8">
             <div className="text-center space-y-4">
@@ -227,17 +226,17 @@ export default function ngof() {
                 </CardContent>
               </Card>
             </div>
-            <div className="mx-auto max-w-md">
+            {/* <div className="mx-auto max-w-md">
               <form className="grid gap-4">
                 <Input type="text" placeholder="Company Name" className="w-full" />
                 <Input type="email" placeholder="Email Address" className="w-full" />
                 <Textarea placeholder="Message" className="w-full" rows={4} />
                 <Button type="submit">Submit Interest</Button>
               </form>
-            </div>
+            </div> */}
           </div>
         </section>
-        <section className="py-12 md:py-24 lg:py-32">
+        {/* <section className="py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6 space-y-8">
             <div className="text-center space-y-4">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Get in Touch</h2>
@@ -268,7 +267,7 @@ export default function ngof() {
               </form>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
       <footer className="bg-muted py-6 px-4 md:px-6 text-muted-foreground">
         <div

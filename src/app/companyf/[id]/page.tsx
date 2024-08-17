@@ -25,7 +25,8 @@ import Link from "next/link"
 import axios from "axios";
 import { useParams } from "next/navigation"; // Use this hook for accessing params
 import { useState, useEffect } from "react";
-
+import { ButtonIcon } from "@radix-ui/react-icons";
+import { Button } from "@/components/ui/button";
 interface Project {
     name: string;
     description: string;
@@ -61,6 +62,42 @@ export default function indi() {
   if (!project) {
     return <div>Loading...</div>;
   }
+
+  const itemName = project.name;
+  const itemPrice = 100;
+
+
+
+const checkout = async () => {
+    try {
+        const response = await axios.post(
+            'http://localhost:5000/api/checkout',
+            {
+                items: [
+                    {
+                        id: 1,
+                        quantity: 1,
+                        price: itemPrice,
+                        name: itemName
+                    }
+                ]
+            },
+            {
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                withCredentials: true, // Use this if your API requires cookies or other credentials
+            }
+        );
+
+        const { url } = response.data;
+        window.location.href = url;
+
+    } catch (err) {
+        console.error("Error during checkout:", err);
+    }
+};
+
 
   return (
     <div className="flex flex-col min-h-dvh">
@@ -106,7 +143,7 @@ export default function indi() {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold">Money Required</h3>
-                  <p className="text-muted-foreground">$500,000</p>
+                  <p className="text-muted-foreground">Rs 500,000</p>
                 </div>
               </div>
             </Card>
@@ -147,27 +184,26 @@ export default function indi() {
               </p>
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
-              <Link
+              {/* <Link
                 href="#"
                 className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                 prefetch={false}
               >
                 Donate $50
-              </Link>
-              <Link
-                href="#"
+              </Link> */}
+              <Button
                 className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                prefetch={false}
+                onClick={checkout}
               >
                 Donate $100
-              </Link>
-              <Link
+              </Button>
+              {/* <Link
                 href="#"
                 className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                 prefetch={false}
               >
                 Donate Other Amount
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
