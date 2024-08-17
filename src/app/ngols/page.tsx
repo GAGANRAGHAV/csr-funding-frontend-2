@@ -55,7 +55,7 @@ export default function login() {
       localStorage.setItem('ngoname', response.data.newNgo._id);
 
 
-      router.push('/NGO');
+      router.push('/ngof');
 
     }
     catch(err)
@@ -75,7 +75,7 @@ export default function login() {
       localStorage.setItem('ngoname', response.data.user._id);
 
   
-      router.push('/NGO');
+      router.push('/ngof');
   
     } catch (err) {
       console.log('error logging in:', err);
