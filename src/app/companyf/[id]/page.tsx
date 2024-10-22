@@ -51,7 +51,7 @@ export default function indi() {
   const fetchProjectDetails = async () => {
     try {
       const response = await axios.get(
-        `https://csr-funding-backend.onrender.com/api/getprojectbyid/${id}`
+        `http://localhost:5000/api/getprojectbyid/${id}`
       );
       setProject(response.data.project);
     } catch (error) {
@@ -71,7 +71,7 @@ export default function indi() {
 const checkout = async () => {
     try {
         const response = await axios.post(
-            'https://csr-funding-backend.onrender.com/api/checkout',
+            'http://localhost:5000/api/checkout',
             {
                 items: [
                     {
