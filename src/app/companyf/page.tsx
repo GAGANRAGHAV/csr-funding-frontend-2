@@ -55,7 +55,7 @@ export default function companyf() {
 
   const fetchProjects = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/getprojects");
+      const response = await axios.get("https://csr-funding-backend.onrender.com/api/getprojects");
       setProjects(response.data.project);
       const projectData = response.data.project;
 

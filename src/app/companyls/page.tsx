@@ -48,7 +48,7 @@ export default function login() {
 
     try{
 
-      const response  = await axios.post("http://localhost:5000/api/companyregister" , {
+      const response  = await axios.post("https://csr-funding-backend.onrender.com/api/companyregister" , {
         name,email,password,
       });
 
@@ -65,7 +65,7 @@ export default function login() {
   
   const handleLogin = async () => {
     try {
-      const response = await axios.post("http://localhost:5000/api/companylogin", {
+      const response = await axios.post("https://csr-funding-backend.onrender.com/api/companylogin", {
         name, password,
       });
   
